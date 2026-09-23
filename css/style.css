@@ -1,0 +1,630 @@
+/* DESIGN SYSTEM & ROOT VARIABLES */
+:root {
+    /* Color Palette */
+    --bg-dark: #0a0a0a;
+    --card-bg: #141414;
+    --card-bg-alt: #181818;
+    --text-light: #f5f5f5;
+    --text-muted: #a0a0a0;
+
+    /* Gold Accents & Gradients */
+    --gold-primary: #d4af37;
+    --gold-light: #f3e5ab;
+    --gold-dark: #aa7c11;
+    --gold-gradient: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+    --gold-btn-gradient: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
+    
+    /* Borders & Shadows */
+    --gold-border: 1px solid #d4af3759;
+    --shadow-card: 0 10px 30px #000000cc, 0 0 15px #d4af371a;
+}
+
+/* GLOBAL RESET & BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    background-image: 
+        radial-gradient(circle at 15% 15%, #d4af3714 0%, #00000000 40%),
+        radial-gradient(circle at 85% 85%, #aa7c1114 0%, #00000000 40%);
+    color: var(--text-light);
+    min-height: 100vh;
+}
+
+/* NO-JS SCREEN MANAGEMENT */
+.screen {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Default state: show login screen if no anchor hashtag is present */
+#login-screen {
+    display: flex;
+}
+
+/* Target display management via URL hash navigation */
+body:has(:target) .screen {
+    display: none;
+}
+
+.screen:target {
+    display: flex !important;
+    flex-direction: column;
+}
+
+.main-container {
+    display: flex;
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 30px auto;
+    gap: 25px;
+    padding: 0 15px;
+}
+
+/* FORM CONTROLS & BUTTONS */
+.form-group {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gold-light);
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    background-color: #0b0b0b;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    color: var(--text-light);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus, 
+.form-group select:focus {
+    border-color: var(--gold-primary);
+    box-shadow: 0 0 8px #d4af374d;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--gold-btn-gradient);
+    color: #000000;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px #00000080;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-link {
+    display: inline-block;
+}
+
+.btn:hover,
+.btn-ho:hover {
+    filter: brightness(1.2);
+}
+
+.btn:hover {
+    box-shadow: 0 0 15px #d4af3766;
+}
+
+.btn-nav-compact {
+    width: auto;
+    margin-top: 0;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--gold-primary);
+    border: 1px solid var(--gold-primary);
+}
+
+.btn-secondary:hover {
+    background: #d4af371a;
+    color: var(--gold-light);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #990000 0%, #550000 100%);
+    color: #ffffff;
+    border: 1px solid #770000;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, #cc0000 0%, #770000 100%);
+}
+
+.btn-ho {
+    background: var(--gold-btn-gradient);
+    color: #000000;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: filter 0.2s ease;
+}
+
+.badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.badge-viewer { 
+    background-color: #222222; 
+    color: var(--text-muted); 
+    border: 1px solid #444444;
+}
+
+.divider {
+    margin: 20px 0;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.mt-5 { margin-top: 5px; }
+.mt-10 { margin-top: 10px; }
+
+/* HEADER & NAVIGATION */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0d0d0d;
+    padding: 15px 30px;
+    border-bottom: var(--gold-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px #000000cc;
+}
+
+.church-name {
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    background: var(--gold-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* LOGIN SCREEN */
+#login-screen {
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #050505 100%);
+}
+
+.login-card {
+    background: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    border: var(--gold-border);
+    box-shadow: var(--shadow-card);
+    text-align: center;
+}
+
+.login-card h2 {
+    color: var(--gold-primary);
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.quote {
+    color: var(--gold-light); 
+    font-size: 0.7rem; 
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    opacity: 0.85;
+}
+
+/* FEED & ANNOUNCEMENTS */
+.feed-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feed-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.admin-post-box {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    border: var(--gold-border);
+    box-shadow: 0 4px 15px #00000080;
+}
+
+.admin-post-box h3 {
+    color: var(--gold-primary);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.post-card {
+    background: var(--card-bg);
+    border: var(--gold-border);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px #00000099;
+}
+
+.post-header {
+    padding: 15px 20px;
+    font-weight: bold;
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #282828;
+    color: var(--gold-light);
+}
+
+.post-image {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #222222;
+}
+
+.post-caption {
+    padding: 20px;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* SIDEBAR (MEET THE CEOS) */
+.sidebar {
+    flex: 1;
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    border: var(--gold-border);
+    height: fit-content;
+    box-shadow: 0 5px 15px #00000099;
+}
+
+.sidebar h3 {
+    color: var(--gold-primary);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.quote-introducton {
+    font-size: 0.8rem; 
+    color: var(--text-muted); 
+    margin-bottom: 15px;
+}
+
+.ceo-list {
+    list-style: none;
+}
+
+.ceo-item {
+    padding: 14px 10px;
+    border-bottom: 1px solid #222222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.ceo-item:hover {
+    background-color: #d4af3714;
+}
+
+.ceo-link {
+    color: var(--gold-light);
+    font-weight: 600;
+    text-decoration: none;
+    flex: 1;
+}
+
+/* BUSINESS SCREEN */
+.business-container {
+    max-width: 850px;
+    margin: 40px auto;
+    background: var(--card-bg);
+    padding: 35px;
+    border-radius: 10px;
+    width: 100%;
+    border: var(--gold-border);
+    box-shadow: 0 10px 30px #000000cc;
+}
+
+.business-banner {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border: 1px solid #333333;
+}
+
+.business-container h1 {
+    color: var(--gold-primary);
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.biz-subtitle {
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.biz-description {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.portfolio-card {
+    background: var(--card-bg-alt);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+.portfolio-card h4 {
+    color: var(--gold-primary);
+}
+
+.portfolio-card a {
+    color: var(--gold-light);
+}
+
+.contact-details {
+    background: var(--card-bg-alt); 
+    padding: 20px; 
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
+    margin-bottom: 20px;
+}
+
+.contact-details h4 {
+    color: var(--gold-primary);
+}
+
+/* SETTINGS SCREEN */
+.settings-container {
+    max-width: 650px;
+    margin: 40px auto;
+    background: var(--card-bg);
+    padding: 35px;
+    border-radius: 10px;
+    width: 100%;
+    border: var(--gold-border);
+    box-shadow: 0 10px 30px #000000cc;
+}
+
+.settings-container h2 {
+    color: var(--gold-primary);
+}
+
+.settings-group {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #222222;
+}
+
+.settings-group h3, .settings-group h4 {
+    color: var(--gold-light);
+    margin-bottom: 10px;
+}
+
+.settings-group p {
+    font-size: 0.85rem;
+    color: var(--text-muted); 
+    margin-bottom: 12px;
+}
+
+.account-list {
+    margin-top: 10px;
+    list-style: none;
+}
+
+.account-item {
+    background: var(--card-bg-alt);
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    border: 1px solid #2a2a2a;
+    color: var(--gold-light);
+}
+
+/* HO STATUS MODAL & TABLES (CSS TARGETED) */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000000d9;
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay:target {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    width: 90%;
+    max-width: 800px;
+    border-radius: 12px;
+    padding: 25px;
+    border: var(--gold-border);
+    box-shadow: 0 10px 30px #000000e6, 0 0 20px #d4af3726;
+}
+
+.modal-lg {
+    max-width: 800px;
+    width: 95%;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #282828;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.modal-header h3 {
+    color: var(--gold-primary);
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--gold-primary);
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: var(--gold-light);
+}
+
+/* Summary Grid Box */
+.summary-box {
+    background: var(--card-bg-alt);
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+}
+
+.summary-item {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.summary-item strong {
+    display: block;
+    color: var(--gold-primary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+/* Data Table */
+.ho-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.ho-table th, .ho-table td {
+    border: 1px solid #2a2a2a;
+    padding: 10px 12px;
+    text-align: left;
+}
+
+.ho-table th {
+    background-color: #1a1a1a;
+    color: var(--gold-light);
+}
+
+.ho-table td {
+    background-color: #121212;
+    color: var(--text-light);
+}
+
+/* FOOTER */
+.footer {
+    background-color: #050505;
+    color: var(--text-muted);
+    padding: 40px 30px;
+    margin-top: 50px;
+    border-top: var(--gold-border);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer h4 {
+    color: var(--gold-primary);
+    margin-bottom: 10px;
+}
+
+.footer-text {
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: var(--gold-light);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

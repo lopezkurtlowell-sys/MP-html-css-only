@@ -3,420 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHURCH OF CHRIST MAYBANCAL</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>CHURCH OF CHRIST MAYBANCAL - Viewing Mode</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="viewer-mode">
+<body>
 
-    <!-- LOGIN SCREEN -->
-    <div id="login-screen" class="screen">
-        <div class="login-card">
-            <h2>MasterPeace International</h2>
-            <p class="quote">EMPOWERING LIVES, BUILDING KINGDOM, ADVANCING PEACE</p>
-            
-            <form action="#main-screen">
-                <div class="form-group">
-                    <label for="username">Email/Username</label>
-                    <input type="text" id="username" placeholder="Enter username" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Enter password" required>
-                </div>
-                <button type="submit" class="btn">Login</button>
-            </form>
-
-            <div class="divider">OR</div>
-
-            <a href="#main-screen" class="btn btn-secondary btn-link">Enter Site in Viewing Mode</a>
+    <header class="header">
+        <div class="church-name">MasterPeace International</div>
+        <div class="header-controls">
+            <span class="badge badge-viewer">Viewing Mode</span>
+            <a href="login.html" class="btn btn-secondary btn-nav-compact">Login / Editor Access</a>
         </div>
-    </div>
+    </header>
 
-    <!-- MAIN SCREEN -->
-    <div id="main-screen" class="screen">
-        <header class="header">
-            <div class="church-name">MasterPeace International</div>
-            
-            <div class="header-controls">
-                <span class="badge badge-viewer">Viewing Mode</span>
-                <a href="#settings-screen" class="btn btn-secondary btn-nav-compact btn-link">Settings</a>
-            </div>
-        </header>
-
-        <div class="main-container">
-            <main class="feed-section">
-                <!-- Announcement Posting UI -->
-                <div class="admin-post-box">
-                    <h3>Create New Announcement</h3>
-                    <form class="mt-10">
-                        <div class="form-group">
-                            <label for="post-image-url">Picture URL (Optional)</label>
-                            <input type="url" id="post-image-url" placeholder="http://example.com/image.jpg">
-                        </div>
-                        <div class="form-group">
-                            <label for="post-caption-input">Description</label>
-                            <textarea id="post-caption-input" rows="3" placeholder="Write your announcement..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Post Announcement</button>
-                    </form>
-                </div>
-
-                <!-- Feed Output Container -->
-                <div class="feed-container">
-                    <article class="post-card">
-                        <div class="post-header">
-                            <span>MasterPeace International</span>
-                        </div>
-                        <img class="post-image" src="CTA copy.jpg" alt="Post image">
-                        <div class="post-caption">
-                            <p>Sunday Worship Service Every Sunday starting at 8:30am & 3:30pm. Everyone is welcome.</p>
-                        </div>
-                    </article>
-                </div>
-            </main>
-
-            <!-- CEOs Sidebar -->
-            <aside class="sidebar">
-                <h3>Meet the CEOs</h3>
-                <p class="quote-introducton">Members of our team:</p>
-                <ul class="ceo-list">
-                    <li class="ceo-item">
-                        <a href="#biz-aldred" class="ceo-link">
-                            <span>Aldred</span> 
-                            <small style="color:#777;">(Bookkeeping/qbo - Fruitful Vine)</small>
-                        </a>
-                        <a href="#ho-aldred" class="btn-ho btn-link">HO Status</a>
-                    </li>
-                    <li class="ceo-item">
-                        <a href="#biz-gian" class="ceo-link">
-                            <span>Gian</span> 
-                            <small style="color:#777;">(Lead generation - Verdant Trust Media)</small>
-                        </a>
-                        <a href="#ho-gian" class="btn-ho btn-link">HO Status</a>
-                    </li>
-                    <li class="ceo-item">
-                        <a href="#biz-james" class="ceo-link">
-                            <span>James</span> 
-                            <small style="color:#777;">(Smm - FavorWorks)</small>
-                        </a>
-                        <a href="#ho-james" class="btn-ho btn-link">HO Status</a>
-                    </li>
-                    <li class="ceo-item">
-                        <a href="#biz-kaeya" class="ceo-link">
-                            <span>Kaeya</span> 
-                            <small style="color:#777;">(Graphics designer - Radiant Victory)</small>
-                        </a>
-                        <a href="#ho-kaeya" class="btn-ho btn-link">HO Status</a>
-                    </li>
-                </ul>
-            </aside>
-        </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <div>
-                    <h4>Contact Us</h4>
-                    <p class="footer-text mt-5">ps.normanlopez@gmail.com</p>
-                    <p class="footer-text">(555) 019-2834</p>
-                </div>
-                <div>
-                    <h4>Social Media</h4>
-                    <a href="https://www.facebook.com/ChurchofChristMaybancal/" target="_blank">Facebook page</a>
-                </div>
-            </div>
-        </footer>
-    </div>
-
-    <!-- BUSINESS SCREENS -->
-    <!-- Business: Aldred -->
-    <div id="biz-aldred" class="screen">
-        <header class="header">
-            <div class="church-name">MasterPeace International</div>
-            <div class="header-controls">
-                <a href="#main-screen" class="btn btn-secondary btn-nav-compact btn-link">Back to Main</a>
-            </div>
-        </header>
-        <div class="business-container">
-            <img class="business-banner" src="example" alt="Business Banner">
-            <h1>Fruitful Vine</h1>
-            <h3 class="biz-subtitle">CEO: Aldred (Bookkeeping/qbo)</h3>
-            <p class="biz-description">Expert QuickBooks Online bookkeeping services.</p>
-
-            <div class="portfolio-card">
-                <h4>CEO Credentials & Links:</h4>
-                <div class="mt-10">
-                    <p><strong>Resume:</strong> <a href="https://example.com/aldred-resume.pdf" target="_blank">https://example.com/aldred-resume.pdf</a></p>
-                    <p><strong>Portfolio:</strong> <a href="https://example.com/aldred-portfolio" target="_blank">https://example.com/aldred-portfolio</a></p>
-                    <p><strong>Website:</strong> <a href="https://fruitfulvine.com" target="_blank">https://fruitfulvine.com</a></p>
-                </div>
-            </div>
-
-            <div class="contact-details">
-                <h4>Contact Details:</h4>
-                <p class="mt-5">john@gracebooks.com | (555) 123-4567</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Business: Gian -->
-    <div id="biz-gian" class="screen">
-        <header class="header">
-            <div class="church-name">MasterPeace International</div>
-            <div class="header-controls">
-                <a href="#main-screen" class="btn btn-secondary btn-nav-compact btn-link">Back to Main</a>
-            </div>
-        </header>
-        <div class="business-container">
-            <img class="business-banner" src="example" alt="Business Banner">
-            <h1>Verdant Trust Media</h1>
-            <h3 class="biz-subtitle">CEO: Gian (Lead generation)</h3>
-            <p class="biz-description">High quality B2B lead generation.</p>
-
-            <div class="portfolio-card">
-                <h4>CEO Credentials & Links:</h4>
-                <div class="mt-10">
-                    <p><strong>Resume:</strong> <a href="https://example.com/gian-resume.pdf" target="_blank">https://example.com/gian-resume.pdf</a></p>
-                    <p><strong>Website:</strong> <a href="https://verdanttrust.com" target="_blank">https://verdanttrust.com</a></p>
-                </div>
-            </div>
-
-            <div class="contact-details">
-                <h4>Contact Details:</h4>
-                <p class="mt-5">mary@faithmedia.com | (555) 987-6543</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Business: James -->
-    <div id="biz-james" class="screen">
-        <header class="header">
-            <div class="church-name">MasterPeace International</div>
-            <div class="header-controls">
-                <a href="#main-screen" class="btn btn-secondary btn-nav-compact btn-link">Back to Main</a>
-            </div>
-        </header>
-        <div class="business-container">
-            <img class="business-banner" src="example" alt="Business Banner">
-            <h1>FavorWorks</h1>
-            <h3 class="biz-subtitle">CEO: James (Smm)</h3>
-            <p class="biz-description">Social Media Management & Strategy.</p>
-
-            <div class="contact-details">
-                <h4>Contact Details:</h4>
-                <p class="mt-5">james@hopecommunity.org | (555) 555-5555</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Business: Kaeya -->
-    <div id="biz-kaeya" class="screen">
-        <header class="header">
-            <div class="church-name">MasterPeace International</div>
-            <div class="header-controls">
-                <a href="#main-screen" class="btn btn-secondary btn-nav-compact btn-link">Back to Main</a>
-            </div>
-        </header>
-        <div class="business-container">
-            <img class="business-banner" src="example" alt="Business Banner">
-            <h1>Radiant Victory</h1>
-            <h3 class="biz-subtitle">CEO: Kaeya (Graphics designer)</h3>
-            <p class="biz-description">Branding and digital graphics solutions.</p>
-
-            <div class="portfolio-card">
-                <h4>CEO Credentials & Links:</h4>
-                <div class="mt-10">
-                    <p><strong>Portfolio:</strong> <a href="https://behance.net/kaeya" target="_blank">https://behance.net/kaeya</a></p>
-                </div>
-            </div>
-
-            <div class="contact-details">
-                <h4>Contact Details:</h4>
-                <p class="mt-5">kaeya@ebonnytech.com | (555) 555-5555</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- SETTINGS SCREEN -->
-    <div id="settings-screen" class="screen">
-        <header class="header">
-            <div class="church-name">MasterPeace International</div>
-            <div class="header-controls">
-                <a href="#main-screen" class="btn btn-secondary btn-nav-compact btn-link">Back</a>
-            </div>
-        </header>
-
-        <div class="settings-container">
-            <h2>Settings</h2>
-            <br>
-            <div class="settings-group">
-                <h3>Add New Account</h3>
-                <form class="mt-10">
-                    <div class="form-group">
-                        <label for="new-editor-email">Email/Username</label>
-                        <input type="text" id="new-editor-email" placeholder="email@gmail.com" required>
+    <div class="main-container">
+        <main class="feed-section">
+            <div id="feed-container" class="feed-container">
+                <article class="post-card">
+                    <div class="post-header">
+                        <span>MasterPeace International</span>
                     </div>
-                    <div class="form-group">
-                        <label for="new-editor-pass">Password</label>
-                        <input type="password" id="new-editor-pass" placeholder="Password" required>
+                    <img class="post-image" src="CTA copy.jpg" alt="Sunday Worship Service Announcement">
+                    <div class="post-caption">
+                        <p>Sunday Worship Service Every Sunday starting at 8:30am & 3:30pm. Everyone is welcome.</p>
                     </div>
-                    <div class="form-group">
-                        <label for="new-editor-role">Role</label>
-                        <select id="new-editor-role">
-                            <option value="ceo">CEO</option>
-                            <option value="editor">Editor</option>
-                            <option value="admin">Admin</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn">Create Account</button>
-                </form>
+                </article>
             </div>
+        </main>
 
-            <div class="settings-group">
-                <h4>Existing Accounts:</h4>
-                <ul class="account-list">
-                    <li class="account-item">admin@masterpeace.org (ADMIN)</li>
-                    <li class="account-item">aldred@gmail.com (CEO)</li>
-                    <li class="account-item">gian@gmail.com (CEO)</li>
-                </ul>
-            </div>
-
-            <div class="settings-group">
-                <h3>Session Options</h3>
-                <p>Log out will keep you on the site, but switches you back into read-only mode.</p>
-                <a href="#main-screen" class="btn btn-secondary btn-link">Log Out to Viewing Mode</a>
-                <br><br>
-                <a href="#login-screen" class="btn btn-danger btn-link">Exit to Login Screen</a>
-            </div>
-        </div>
+        <aside class="sidebar">
+            <h3>Businesses</h3>
+            <p class="quote-introducton">Services the we provide:</p>
+            <ul class="ceo-list">
+                <li class="ceo-item"><a href="ceo accounts/ceo-aldred.html">Bookkeeping<small>Fruitful Vine</small></a></li>
+                <li class="ceo-item"><a href="ceo accounts/ceo-gian.html">Lead generation <small>Verdant Trust Media</small></a></li>
+                <li class="ceo-item"><a href="ceo accounts/ceo-james.html">Smm <small>FavorWorks</small></a></li>
+                <li class="ceo-item"><a href="ceo accounts/ceo-kaeya.html">Graphics designer<small>Radiant Victory</small></a></li>
+                <li class="ceo-item"><a href="ceo accounts/ceo-kurt.html">Video editing<small>CineVision</small></a></li>
+                <li class="ceo-item"><a href="ceo accounts/ceo-michael.html">Short form<small>ViralClips Studio</small></a></li>
+                <li class="ceo-item"><a href="ceo accounts/ceo-david.html">VA<small>Apex Virtual Assistants</small></a></li>
+                <li class="ceo-item"><a href="ceo accounts/ceo-hannah.html">Copywriter<small>Ink & Impact</small></a></li>
+                <li class="ceo-item"><a href="ceo accounts/ceo-chris.html">Data Entry<small>Precise Analytics</small></a></li>
+                <li class="ceo-item"><a href="ceo accounts/ceo-patricia.html">SEO Specialist<small>RankTop Marketing</small></a></li>
+            </ul>
+        </aside>
     </div>
 
-    <!-- HO STATUS MODALS -->
-    <!-- HO Modal: Aldred -->
-    <div id="ho-aldred" class="modal-overlay">
-        <div class="modal-content modal-lg">
-            <div class="modal-header">
-                <h3>Aldred's HO Status Tab (Bookkeeping/qbo)</h3>
-                <a href="#main-screen" class="close-btn">&times;</a>
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h4>Contact Us</h4>
+                <p class="footer-text mt-5">ps.normanlopez@gmail.com</p>
+                <p class="footer-text">(555) 019-2834</p>
             </div>
             <div>
-                <div class="summary-box">
-                    <div class="summary-item"><strong>Client Count</strong> <span>12</span></div>
-                    <div class="summary-item"><strong>Gross Amount</strong> <span>₱45,000 PHP</span></div>
-                    <div class="summary-item"><strong>Total Partners</strong> <span>2</span></div>
-                    <div class="summary-item"><strong>Total Tithes</strong> <span>₱5,000 PHP</span></div>
-                    <div class="summary-item"><strong>Total Offerings</strong> <span>₱500 PHP</span></div>
-                </div>
-                <table class="ho-table">
-                    <thead>
-                        <tr>
-                            <th>Partner Name</th>
-                            <th>Tithes (₱ PHP)</th>
-                            <th>Offerings (₱ PHP)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>John Doe</td><td>₱2,500 PHP</td><td>₱250 PHP</td></tr>
-                        <tr><td>Jane Smith</td><td>₱2,500 PHP</td><td>₱250 PHP</td></tr>
-                    </tbody>
-                </table>
+                <h4>Social Media</h4>
+                <a href="https://www.facebook.com/ChurchofChristMaybancal/" target="_blank">Facebook page</a>
             </div>
         </div>
-    </div>
-
-    <!-- HO Modal: Gian -->
-    <div id="ho-gian" class="modal-overlay">
-        <div class="modal-content modal-lg">
-            <div class="modal-header">
-                <h3>Gian's HO Status Tab (Lead generation)</h3>
-                <a href="#main-screen" class="close-btn">&times;</a>
-            </div>
-            <div>
-                <div class="summary-box">
-                    <div class="summary-item"><strong>Client Count</strong> <span>85</span></div>
-                    <div class="summary-item"><strong>Gross Amount</strong> <span>₱32,000 PHP</span></div>
-                    <div class="summary-item"><strong>Total Partners</strong> <span>1</span></div>
-                    <div class="summary-item"><strong>Total Tithes</strong> <span>₱4,000 PHP</span></div>
-                    <div class="summary-item"><strong>Total Offerings</strong> <span>₱400 PHP</span></div>
-                </div>
-                <table class="ho-table">
-                    <thead>
-                        <tr>
-                            <th>Partner Name</th>
-                            <th>Tithes (₱ PHP)</th>
-                            <th>Offerings (₱ PHP)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Mark Wilson</td><td>₱4,000 PHP</td><td>₱400 PHP</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
-    <!-- HO Modal: James -->
-    <div id="ho-james" class="modal-overlay">
-        <div class="modal-content modal-lg">
-            <div class="modal-header">
-                <h3>James's HO Status Tab (Smm)</h3>
-                <a href="#main-screen" class="close-btn">&times;</a>
-            </div>
-            <div>
-                <div class="summary-box">
-                    <div class="summary-item"><strong>Client Count</strong> <span>40</span></div>
-                    <div class="summary-item"><strong>Gross Amount</strong> <span>₱18,000 PHP</span></div>
-                    <div class="summary-item"><strong>Total Partners</strong> <span>1</span></div>
-                    <div class="summary-item"><strong>Total Tithes</strong> <span>₱3,000 PHP</span></div>
-                    <div class="summary-item"><strong>Total Offerings</strong> <span>₱300 PHP</span></div>
-                </div>
-                <table class="ho-table">
-                    <thead>
-                        <tr>
-                            <th>Partner Name</th>
-                            <th>Tithes (₱ PHP)</th>
-                            <th>Offerings (₱ PHP)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Sarah Lee</td><td>₱3,000 PHP</td><td>₱300 PHP</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
-    <!-- HO Modal: Kaeya -->
-    <div id="ho-kaeya" class="modal-overlay">
-        <div class="modal-content modal-lg">
-            <div class="modal-header">
-                <h3>Kaeya's HO Status Tab (Graphics designer)</h3>
-                <a href="#main-screen" class="close-btn">&times;</a>
-            </div>
-            <div>
-                <div class="summary-box">
-                    <div class="summary-item"><strong>Client Count</strong> <span>210</span></div>
-                    <div class="summary-item"><strong>Gross Amount</strong> <span>₱95,000 PHP</span></div>
-                    <div class="summary-item"><strong>Total Partners</strong> <span>2</span></div>
-                    <div class="summary-item"><strong>Total Tithes</strong> <span>₱8,000 PHP</span></div>
-                    <div class="summary-item"><strong>Total Offerings</strong> <span>₱1,000 PHP</span></div>
-                </div>
-                <table class="ho-table">
-                    <thead>
-                        <tr>
-                            <th>Partner Name</th>
-                            <th>Tithes (₱ PHP)</th>
-                            <th>Offerings (₱ PHP)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>David Kim</td><td>₱4,000 PHP</td><td>₱500 PHP</td></tr>
-                        <tr><td>Emily Davis</td><td>₱4,000 PHP</td><td>₱500 PHP</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+    </footer>
 
 </body>
 </html>

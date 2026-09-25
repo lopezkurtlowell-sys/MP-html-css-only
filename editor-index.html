@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHURCH OF CHRIST MAYBANCAL - Editor Mode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="church-name">MasterPeace International</div>
+        <div class="header-controls">
+            <span class="badge badge-admin">EDITOR Mode</span>
+            <a href="settings.html" class="btn btn-secondary btn-nav-compact">Settings</a>
+            <a href="index.html" class="btn btn-secondary btn-nav-compact">Log Out</a>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <main class="feed-section">
+            <div class="admin-post-box">
+                <h3>Create New Announcement</h3>
+                <form class="mt-10">
+                    <div class="form-group">
+                        <label>Picture URL (Optional)</label>
+                        <input type="url" placeholder="http://example.com/image.jpg">
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea rows="3" placeholder="Write your announcement..." required></textarea>
+                    </div>
+                    <button type="button" class="btn">Post Announcement</button>
+                </form>
+            </div>
+
+            <div id="feed-container" class="feed-container">
+                <article class="post-card">
+                    <div class="post-header">
+                        <span>MasterPeace International</span>
+                    </div>
+                    <img class="post-image" src="CTA copy.jpg" alt="Sunday Worship Service Announcement">
+                    <div class="post-caption">
+                        <p>Sunday Worship Service Every Sunday starting at 8:30am & 3:30pm. Everyone is welcome.</p>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <h3>Meet the CEOs</h3>
+            <p class="quote-introducton">Members of our team:</p>
+            <ul class="ceo-list">
+                <li class="ceo-item">
+                    <a href="ceo accounts/ceo-aldred.html">Bookkeeping<small>Fruitful Vine</small></a>
+                    <div>
+                        <a href="#ho-modal" class="btn-ho">HO Status</a>
+                        <a href="#" class="btn-sm-danger">Delete</a>
+                    </div>
+                </li>
+                <li class="ceo-item">
+                    <a href="ceo accounts/ceo-gian.html">Lead generation <small>Verdant Trust Media</small></a>
+                    <div>
+                        <a href="#ho-modal" class="btn-ho">HO Status</a>
+                        <a href="#" class="btn-sm-danger">Delete</a>
+                    </div>
+                </li>
+                <li class="ceo-item">
+                    <a href="ceo accounts/ceo-james.html">Smm <small>FavorWorks</small></a>
+                    <div>
+                        <a href="#ho-modal" class="btn-ho">HO Status</a>
+                        <a href="#" class="btn-sm-danger">Delete</a>
+                    </div>
+                </li>
+                <li class="ceo-item">
+                    <a href="ceo accounts/ceo-kaeya.html">Graphics designer<small>Radiant Victory</small></a>
+                    <div>
+                        <a href="#ho-modal" class="btn-ho">HO Status</a>
+                        <a href="#" class="btn-sm-danger">Delete</a>
+                    </div>
+                </li>
+                <li class="ceo-item">
+                    <a href="ceo accounts/ceo-kurt.html">Video editing<small>CineVision</small></a>
+                    <div>
+                        <a href="#ho-modal" class="btn-ho">HO Status</a>
+                        <a href="#" class="btn-sm-danger">Delete</a>
+                    </div>
+                </li>
+                <li class="ceo-item">
+                    <a href="ceo accounts/ceo-michael.html">Short form<small>ViralClips Studio</small></a>
+                    <div>
+                        <a href="#ho-modal" class="btn-ho">HO Status</a>
+                        <a href="#" class="btn-sm-danger">Delete</a>
+                    </div>
+                </li>
+                <li class="ceo-item">
+                    <a href="ceo accounts/ceo-david.html">VA<small>Apex Virtual Assistants</small></a>
+                    <div>
+                        <a href="#ho-modal" class="btn-ho">HO Status</a>
+                        <a href="#" class="btn-sm-danger">Delete</a>
+                    </div>
+                </li>
+                <li class="ceo-item">
+                    <a href="ceo accounts/ceo-hannah.html">Copywriter<small>Ink & Impact</small></a>
+                    <div>
+                        <a href="#ho-modal" class="btn-ho">HO Status</a>
+                        <a href="#" class="btn-sm-danger">Delete</a>
+                    </div>
+                </li>
+                <li class="ceo-item">
+                    <a href="ceo accounts/ceo-chris.html">Data Entry<small>Precise Analytics</small></a>
+                    <div>
+                        <a href="#ho-modal" class="btn-ho">HO Status</a>
+                        <a href="#" class="btn-sm-danger">Delete</a>
+                    </div>
+                </li>
+                <li class="ceo-item">
+                    <a href="ceo accounts/ceo-patricia.html">SEO Specialist<small>RankTop Marketing</small></a>
+                    <div>
+                        <a href="#ho-modal" class="btn-ho">HO Status</a>
+                        <a href="#" class="btn-sm-danger">Delete</a>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h4>Contact Us</h4>
+                <p class="footer-text mt-5">ps.normanlopez@gmail.com</p>
+                <p class="footer-text">(555) 019-2834</p>
+            </div>
+            <div>
+                <h4>Social Media</h4>
+                <a href="https://www.facebook.com/ChurchofChristMaybancal/" target="_blank">Facebook page</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="ho-modal" class="ho-modal">
+        <div class="ho-modal-content">
+            <div class="ho-modal-header">
+                <h3>HO Status</h3>
+                <a href="#" class="btn-sm-danger close-btn">&times; Close</a>
+            </div>
+            
+            <div class="ho-modal-body">
+                <div class="ho-summary-grid">
+                    <div class="summary-card">
+                        <span class="summary-title">CLIENT COUNT</span>
+                        <input type="text" class="summary-val" placeholder="0">
+                    </div>
+                    <div class="summary-card">
+                        <span class="summary-title">TOTAL PARTNERS</span>
+                        <input type="text" class="summary-val" placeholder="0">
+                    </div>
+                    <div class="summary-card">
+                        <span class="summary-title">GROSS AMOUNT</span>
+                        <input type="text" class="summary-val" placeholder="$0.00">
+                    </div>
+                    <div class="summary-card">
+                        <span class="summary-title">TOTAL TITHES</span>
+                        <input type="text" class="summary-val" placeholder="$0.00">
+                    </div>
+                    <div class="summary-card">
+                        <span class="summary-title">OFFERINGS</span>
+                        <input type="text" class="summary-val" placeholder="$0.00">
+                    </div>
+                    <div class="summary-card highlight">
+                        <span class="summary-title">TOTAL</span>
+                        <input type="text" class="summary-val" placeholder="$0.00">
+                    </div>
+                </div>
+
+                <div class="partner-directory-section">
+                    <h4>Partner Directory</h4>
+                    <div class="table-container">
+                        <table class="ho-status-table">
+                            <thead>
+                                <tr>
+                                    <th>Partner Name</th>
+                                    <th>Service / Role</th>
+                                    <th>Earnings / Rate</th>
+                                    <th>Tithes</th>
+                                    <th>Offerings</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="text" placeholder="Partner Name"></td>
+                                    <td><input type="text" placeholder="Service / Role"></td>
+                                    <td><input type="text" placeholder="$0.00"></td>
+                                    <td><input type="text" placeholder="$0.00"></td>
+                                    <td><input type="text" placeholder="$0.00"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" placeholder="Partner Name"></td>
+                                    <td><input type="text" placeholder="Service / Role"></td>
+                                    <td><input type="text" placeholder="$0.00"></td>
+                                    <td><input type="text" placeholder="$0.00"></td>
+                                    <td><input type="text" placeholder="$0.00"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" placeholder="Partner Name"></td>
+                                    <td><input type="text" placeholder="Service / Role"></td>
+                                    <td><input type="text" placeholder="$0.00"></td>
+                                    <td><input type="text" placeholder="$0.00"></td>
+                                    <td><input type="text" placeholder="$0.00"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,20 +1,17 @@
 /* DESIGN SYSTEM & ROOT VARIABLES */
 :root {
-    /* Color Palette */
     --bg-dark: #0a0a0a;
     --card-bg: #141414;
     --card-bg-alt: #181818;
     --text-light: #f5f5f5;
     --text-muted: #a0a0a0;
 
-    /* Gold Accents & Gradients */
     --gold-primary: #d4af37;
     --gold-light: #f3e5ab;
     --gold-dark: #aa7c11;
     --gold-gradient: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
     --gold-btn-gradient: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
     
-    /* Borders & Shadows */
     --gold-border: 1px solid #d4af3759;
     --shadow-card: 0 10px 30px #000000cc, 0 0 15px #d4af371a;
 }
@@ -36,28 +33,6 @@ body {
     min-height: 100vh;
 }
 
-/* NO-JS SCREEN MANAGEMENT */
-.screen {
-    display: none;
-    width: 100%;
-    min-height: 100vh;
-}
-
-/* Default state: show login screen if no anchor hashtag is present */
-#login-screen {
-    display: flex;
-}
-
-/* Target display management via URL hash navigation */
-body:has(:target) .screen {
-    display: none;
-}
-
-.screen:target {
-    display: flex !important;
-    flex-direction: column;
-}
-
 .main-container {
     display: flex;
     flex: 1;
@@ -68,7 +43,7 @@ body:has(:target) .screen {
     padding: 0 15px;
 }
 
-/* FORM CONTROLS & BUTTONS */
+/* UI COMPONENTS & FORM STYLES */
 .form-group {
     margin-bottom: 18px;
     text-align: left;
@@ -102,6 +77,7 @@ body:has(:target) .screen {
     box-shadow: 0 0 8px #d4af374d;
 }
 
+/* BUTTON SYSTEM */
 .btn {
     width: 100%;
     padding: 12px;
@@ -117,16 +93,15 @@ body:has(:target) .screen {
     font-size: 0.85rem;
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px #00000080;
-    text-align: center;
     text-decoration: none;
-}
-
-.btn-link {
     display: inline-block;
+    text-align: center;
 }
 
 .btn:hover,
-.btn-ho:hover {
+.btn-ho:hover,
+.btn-portfolio:hover,
+.btn-onlinejobs:hover {
     filter: brightness(1.2);
 }
 
@@ -137,8 +112,42 @@ body:has(:target) .screen {
 .btn-nav-compact {
     width: auto;
     margin-top: 0;
+    padding: 8px 16px;
 }
 
+/* CEO PORTFOLIO & ONLINEJOBS BUTTONS */
+.portfolio-buttons-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.btn-portfolio {
+    background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
+    color: #000000;
+    width: auto;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-onlinejobs {
+    background: linear-gradient(135deg, #0072ff 0%, #00c6ff 100%);
+    color: #ffffff;
+    width: auto;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+/* SECONDARY & DANGER BUTTONS */
 .btn-secondary {
     background: transparent;
     color: var(--gold-primary);
@@ -160,6 +169,22 @@ body:has(:target) .screen {
     background: linear-gradient(135deg, #cc0000 0%, #770000 100%);
 }
 
+.btn-sm-danger {
+    background-color: #721c24;
+    color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    text-decoration: none;
+}
+
+.btn-sm-danger:hover {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
 .btn-ho {
     background: var(--gold-btn-gradient);
     color: #000000;
@@ -167,12 +192,12 @@ body:has(:target) .screen {
     padding: 6px 12px;
     border-radius: 4px;
     font-size: 0.75rem;
-    cursor: pointer;
     font-weight: bold;
     text-decoration: none;
-    transition: filter 0.2s ease;
+    display: inline-block;
 }
 
+/* BADGES & UTILITIES */
 .badge {
     padding: 6px 14px;
     border-radius: 20px;
@@ -186,6 +211,12 @@ body:has(:target) .screen {
     background-color: #222222; 
     color: var(--text-muted); 
     border: 1px solid #444444;
+}
+
+.badge-admin { 
+    background: #d4af3726; 
+    color: var(--gold-light); 
+    border: 1px solid var(--gold-primary);
 }
 
 .divider {
@@ -230,8 +261,10 @@ body:has(:target) .screen {
 
 /* LOGIN SCREEN */
 #login-screen {
+    display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
     background: radial-gradient(circle at center, #1a1a1a 0%, #050505 100%);
 }
 
@@ -249,7 +282,6 @@ body:has(:target) .screen {
 .login-card h2 {
     color: var(--gold-primary);
     font-size: 1.6rem;
-    letter-spacing: 1px;
     margin-bottom: 5px;
 }
 
@@ -281,13 +313,11 @@ body:has(:target) .screen {
     padding: 20px;
     border-radius: 10px;
     border: var(--gold-border);
-    box-shadow: 0 4px 15px #00000080;
 }
 
 .admin-post-box h3 {
     color: var(--gold-primary);
     font-size: 1.1rem;
-    margin-bottom: 10px;
 }
 
 .post-card {
@@ -295,7 +325,6 @@ body:has(:target) .screen {
     border: var(--gold-border);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px #00000099;
 }
 
 .post-header {
@@ -311,16 +340,14 @@ body:has(:target) .screen {
     max-height: 480px;
     object-fit: cover;
     display: block;
-    border-bottom: 1px solid #222222;
 }
 
 .post-caption {
     padding: 20px;
-    color: var(--text-light);
     line-height: 1.6;
 }
 
-/* SIDEBAR (MEET THE CEOS) */
+/* SIDEBAR & CEO LIST STYLING (For All 10 CEOs) */
 .sidebar {
     flex: 1;
     background: var(--card-bg);
@@ -328,13 +355,11 @@ body:has(:target) .screen {
     border-radius: 10px;
     border: var(--gold-border);
     height: fit-content;
-    box-shadow: 0 5px 15px #00000099;
 }
 
 .sidebar h3 {
     color: var(--gold-primary);
     font-size: 1.2rem;
-    margin-bottom: 5px;
 }
 
 .quote-introducton {
@@ -345,29 +370,54 @@ body:has(:target) .screen {
 
 .ceo-list {
     list-style: none;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Custom Scrollbar for Sidebar List */
+.ceo-list::-webkit-scrollbar {
+    width: 6px;
+}
+.ceo-list::-webkit-scrollbar-thumb {
+    background-color: var(--gold-dark);
+    border-radius: 3px;
 }
 
 .ceo-item {
-    padding: 14px 10px;
+    padding: 12px 10px;
     border-bottom: 1px solid #222222;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 4px;
+    gap: 10px;
 }
 
-.ceo-item:hover {
-    background-color: #d4af3714;
+.ceo-item:last-child {
+    border-bottom: none;
 }
 
-.ceo-link {
+.ceo-item a {
     color: var(--gold-light);
     font-weight: 600;
+    font-size: 0.9rem;
     text-decoration: none;
-    flex: 1;
+    transition: color 0.2s ease;
 }
 
-/* BUSINESS SCREEN */
+.ceo-item a:hover {
+    color: var(--gold-primary);
+    text-decoration: underline;
+}
+
+.ceo-item small {
+    display: block;
+    color: var(--text-muted);
+    font-weight: normal;
+    font-size: 0.75rem;
+}
+
+/* BUSINESS/PORTFOLIO PAGE (Accommodates all CEOs) */
 .business-container {
     max-width: 850px;
     margin: 40px auto;
@@ -376,7 +426,7 @@ body:has(:target) .screen {
     border-radius: 10px;
     width: 100%;
     border: var(--gold-border);
-    box-shadow: 0 10px 30px #000000cc;
+    box-shadow: var(--shadow-card);
 }
 
 .business-banner {
@@ -388,50 +438,30 @@ body:has(:target) .screen {
     border: 1px solid #333333;
 }
 
-.business-container h1 {
-    color: var(--gold-primary);
-    font-size: 2rem;
-    margin-bottom: 5px;
-}
-
 .biz-subtitle {
     color: var(--text-muted);
     font-weight: 500;
+    margin-top: 5px;
     margin-bottom: 15px;
 }
 
 .biz-description {
     line-height: 1.6;
     margin-bottom: 20px;
+    color: var(--text-light);
 }
 
-.portfolio-card {
+.portfolio-card, .contact-details {
     background: var(--card-bg-alt);
     padding: 20px;
     border-radius: 8px;
     border: 1px solid #2a2a2a;
     margin-bottom: 20px;
-    color: var(--text-light);
 }
 
-.portfolio-card h4 {
+.portfolio-card h4, .contact-details h4 {
     color: var(--gold-primary);
-}
-
-.portfolio-card a {
-    color: var(--gold-light);
-}
-
-.contact-details {
-    background: var(--card-bg-alt); 
-    padding: 20px; 
-    border-radius: 8px;
-    border: 1px solid #2a2a2a;
-    margin-bottom: 20px;
-}
-
-.contact-details h4 {
-    color: var(--gold-primary);
+    font-size: 1rem;
 }
 
 /* SETTINGS SCREEN */
@@ -441,9 +471,7 @@ body:has(:target) .screen {
     background: var(--card-bg);
     padding: 35px;
     border-radius: 10px;
-    width: 100%;
     border: var(--gold-border);
-    box-shadow: 0 10px 30px #000000cc;
 }
 
 .settings-container h2 {
@@ -456,20 +484,9 @@ body:has(:target) .screen {
     border-bottom: 1px solid #222222;
 }
 
-.settings-group h3, .settings-group h4 {
-    color: var(--gold-light);
-    margin-bottom: 10px;
-}
-
-.settings-group p {
-    font-size: 0.85rem;
-    color: var(--text-muted); 
-    margin-bottom: 12px;
-}
-
 .account-list {
-    margin-top: 10px;
     list-style: none;
+    margin-top: 10px;
 }
 
 .account-item {
@@ -477,120 +494,9 @@ body:has(:target) .screen {
     padding: 10px 14px;
     margin-bottom: 8px;
     border-radius: 6px;
-    font-size: 0.9rem;
     border: 1px solid #2a2a2a;
     color: var(--gold-light);
-}
-
-/* HO STATUS MODAL & TABLES (CSS TARGETED) */
-.modal-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #000000d9;
-    backdrop-filter: blur(4px);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-overlay:target {
-    display: flex;
-}
-
-.modal-content {
-    background: var(--card-bg);
-    width: 90%;
-    max-width: 800px;
-    border-radius: 12px;
-    padding: 25px;
-    border: var(--gold-border);
-    box-shadow: 0 10px 30px #000000e6, 0 0 20px #d4af3726;
-}
-
-.modal-lg {
-    max-width: 800px;
-    width: 95%;
-}
-
-.modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #282828;
-    padding-bottom: 12px;
-    margin-bottom: 20px;
-}
-
-.modal-header h3 {
-    color: var(--gold-primary);
-}
-
-.close-btn {
-    background: none;
-    border: none;
-    font-size: 1.8rem;
-    color: var(--gold-primary);
-    cursor: pointer;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.close-btn:hover {
-    color: var(--gold-light);
-}
-
-/* Summary Grid Box */
-.summary-box {
-    background: var(--card-bg-alt);
-    border: 1px solid #2a2a2a;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 15px;
-}
-
-.summary-item {
     font-size: 0.9rem;
-    color: var(--text-light);
-}
-
-.summary-item strong {
-    display: block;
-    color: var(--gold-primary);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 4px;
-}
-
-/* Data Table */
-.ho-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    font-size: 0.9rem;
-}
-
-.ho-table th, .ho-table td {
-    border: 1px solid #2a2a2a;
-    padding: 10px 12px;
-    text-align: left;
-}
-
-.ho-table th {
-    background-color: #1a1a1a;
-    color: var(--gold-light);
-}
-
-.ho-table td {
-    background-color: #121212;
-    color: var(--text-light);
 }
 
 /* FOOTER */
@@ -607,7 +513,6 @@ body:has(:target) .screen {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -616,15 +521,161 @@ body:has(:target) .screen {
     margin-bottom: 10px;
 }
 
-.footer-text {
-    font-size: 0.9rem;
-}
-
 .footer a {
     color: var(--gold-light);
     text-decoration: none;
 }
 
-.footer a:hover {
-    text-decoration: underline;
+/* RESPONSIVE LAYOUT */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .portfolio-buttons-group {
+        flex-direction: column;
+    }
+    
+    .btn-portfolio, .btn-onlinejobs {
+        width: 100%;
+    }
+}
+/* HO STATUS MODAL (NO JS) */
+.ho-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.ho-modal:target {
+    display: flex;
+}
+
+.ho-modal-content {
+    background: #141414;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    width: 92%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 20px 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+}
+
+.ho-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #2a2a2a;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.ho-modal-header h3 {
+    color: #d4af37;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* TOP SUMMARY STATS GRID */
+.ho-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.summary-card {
+    background: #181818;
+    border: 1px solid #2d2d2d;
+    border-radius: 6px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.summary-card.highlight {
+    border-color: #d4af37;
+    background: #1e1b12;
+}
+
+.summary-title {
+    color: #d4af37;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.summary-val {
+    background: #0a0a0a;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 6px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    width: 100%;
+}
+
+/* PARTNER DIRECTORY AREA */
+.partner-directory-section h4 {
+    color: #d4af37;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    border-left: 3px solid #d4af37;
+    padding-left: 8px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.ho-status-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ho-status-table th {
+    background-color: #1a1a1a;
+    color: #d4af37;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #2d2d2d;
+    white-space: nowrap;
+}
+
+.ho-status-table td {
+    background-color: #0f0f0f;
+    padding: 4px 6px;
+    border: 1px solid #2d2d2d;
+}
+
+.ho-status-table input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #f5f5f5;
+    padding: 6px;
+    font-size: 0.85rem;
+    outline: none;
+}
+
+.ho-status-table input::placeholder {
+    color: #444;
 }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - MasterPeace International</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="church-name">MasterPeace International</div>
+        <div class="header-controls">
+            <a href="editor-index.html" class="btn btn-secondary btn-nav-compact">Back</a>
+        </div>
+    </header>
+
+    <div class="settings-container">
+        <h2>Settings</h2>
+        <br>
+        <div class="settings-group">
+            <h3>Add New Account (Editor Only)</h3>
+            <form class="mt-10">
+                <div class="form-group">
+                    <label>Email/Username</label>
+                    <input type="text" placeholder="email@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <label>Role</label>
+                    <select>
+                        <option value="ceo">CEO</option>
+                        <option value="editor">Editor</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Service (If CEO)</label>
+                    <select>
+                        <option value="Bookkeeping/qbo">Bookkeeping/qbo</option>
+                        <option value="Lead generation">Lead generation</option>
+                        <option value="Smm">Smm</option>
+                        <option value="Graphics designer">Graphics designer</option>
+                        <option value="Video editing">Video editing</option>
+                        <option value="Short form">Short form</option>
+                        <option value="VA">VA</option>
+                        <option value="Copywriter">Copywriter</option>
+                        <option value="Data Entry">Data Entry</option>
+                        <option value="SEO Specialist">SEO Specialist</option>
+                    </select>
+                </div>
+                <button type="button" class="btn">Create Account</button>
+            </form>
+        </div>
+
+        <div class="settings-group">
+            <h4>Existing Accounts:</h4>
+            <ul class="account-list">
+                <li class="account-item">admin@masterpeace.org (ADMIN)</li>
+                <li class="account-item">kurt@gmail.com (CEO)</li>
+                <li class="account-item">aldred@gmail.com (CEO)</li>
+            </ul>
+        </div>
+
+        <div class="settings-group">
+            <h3>Session Options</h3>
+            <p>Log out will keep you on the site, but switches you back into read-only mode.</p>
+            <a href="index.html" class="btn btn-secondary" style="display:inline-block; text-align:center; text-decoration:none;">Log Out to Viewing Mode</a>
+            <br><br>
+            <a href="login.html" class="btn btn-danger" style="display:inline-block; text-align:center; text-decoration:none;">Exit to Login Screen</a>
+        </div>
+    </div>
+
+</body>
+</html>

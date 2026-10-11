@@ -28,9 +28,44 @@
             </div>
         </div>
 
-        <div class="contact-details">
+        <div class="portfolio-card mt-20">
+            <h4>Request Graphic Design Service</h4>
+            <form action="#thank-you-modal" method="GET" class="mt-10">
+                <div class="form-group">
+                    <label>Design Project Type</label>
+                    <select>
+                        <option value="branding">Logo & Full Brand Identity Package</option>
+                        <option value="social-graphics">Social Media Graphics & Banners</option>
+                        <option value="marketing-collateral">Flyers, Brochures, or Presentation Decks</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Design Style Preference</label>
+                    <input type="text" placeholder="e.g., Minimalist, Corporate, Vibrant, Modern">
+                </div>
+                <div class="form-group">
+                    <label>Design Brief & Color Preferences</label>
+                    <textarea rows="4" placeholder="Describe the concept, mood board links, and specific dimensions required..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Reference Assets Link (Drive / Moodboard)</label>
+                    <input type="url" placeholder="https://drive.google.com/...">
+                </div>
+                <button type="submit" class="btn">Submit Design Request</button>
+            </form>
+        </div>
+
+        <div class="contact-details mt-20">
             <h4>Contact Details:</h4>
             <p class="mt-5">kaeya@gmail.com | (555) 019-2834</p>
+        </div>
+    </div>
+
+    <div id="thank-you-modal" class="ho-modal">
+        <div class="ho-modal-content" style="text-align: center; max-width: 450px; padding: 30px;">
+            <h3 style="color: var(--gold-primary); margin-bottom: 15px;">Thank You!</h3>
+            <p style="margin-bottom: 25px; color: var(--text-light); line-height: 1.5;">Thank you for choosing <strong>Radiant Victory</strong>! Your request has been successfully submitted.</p>
+            <a href="#" class="btn" style="display: inline-block; text-decoration: none; margin-top: 0;">Okay</a>
         </div>
     </div>
 </body>

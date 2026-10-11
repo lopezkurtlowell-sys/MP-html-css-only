@@ -28,9 +28,44 @@
             </div>
         </div>
 
-        <div class="contact-details">
+        <div class="portfolio-card mt-20">
+            <h4>Request Short-Form Video Editing</h4>
+            <form action="#thank-you-modal" method="GET" class="mt-10">
+                <div class="form-group">
+                    <label>Video Package Style</label>
+                    <select>
+                        <option value="talking-head">Alex Hormozi Style / Captioned Talking Head</option>
+                        <option value="gaming-podcast">Podcast / Gaming Highlights Clipper</option>
+                        <option value="product-promo">E-commerce / TikTok Shop Promo Reel</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Quantity / Batch Size</label>
+                    <input type="text" placeholder="e.g., 10 reels per month">
+                </div>
+                <div class="form-group">
+                    <label>Editing Instructions & Hook Ideas</label>
+                    <textarea rows="4" placeholder="Specify font styles, sound effects, B-roll preferences, and target length..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Raw Video Link (Google Drive)</label>
+                    <input type="url" placeholder="https://drive.google.com/...">
+                </div>
+                <button type="submit" class="btn">Submit Short-Form Request</button>
+            </form>
+        </div>
+
+        <div class="contact-details mt-20">
             <h4>Contact Details:</h4>
             <p class="mt-5">michael@gmail.com | (555) 019-2834</p>
+        </div>
+    </div>
+
+    <div id="thank-you-modal" class="ho-modal">
+        <div class="ho-modal-content" style="text-align: center; max-width: 450px; padding: 30px;">
+            <h3 style="color: var(--gold-primary); margin-bottom: 15px;">Thank You!</h3>
+            <p style="margin-bottom: 25px; color: var(--text-light); line-height: 1.5;">Thank you for choosing <strong>ViralClips Studio</strong>! Your request has been successfully submitted.</p>
+            <a href="#" class="btn" style="display: inline-block; text-decoration: none; margin-top: 0;">Okay</a>
         </div>
     </div>
 </body>

@@ -28,9 +28,44 @@
             </div>
         </div>
 
-        <div class="contact-details">
+        <div class="portfolio-card mt-20">
+            <h4>Request Data Entry / Research Service</h4>
+            <form action="#thank-you-modal" method="GET" class="mt-10">
+                <div class="form-group">
+                    <label>Project Scope</label>
+                    <select>
+                        <option value="spreadsheet">Spreadsheet Cleanup & Data Formatting (Excel / Google Sheets)</option>
+                        <option value="web-research">Web Research & Contact Scraping</option>
+                        <option value="database">Database / CRM Input & Migration</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Estimated Volume / Records</label>
+                    <input type="text" placeholder="e.g., 1,000 rows of data">
+                </div>
+                <div class="form-group">
+                    <label>Project Instructions & Formatting Rules</label>
+                    <textarea rows="4" placeholder="Specify exact columns, formatting criteria, and sources to pull from..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Source Document Link (Google Sheets / Drive)</label>
+                    <input type="url" placeholder="https://docs.google.com/spreadsheets/...">
+                </div>
+                <button type="submit" class="btn">Submit Data Entry Request</button>
+            </form>
+        </div>
+
+        <div class="contact-details mt-20">
             <h4>Contact Details:</h4>
             <p class="mt-5">chris@gmail.com | (555) 019-2834</p>
+        </div>
+    </div>
+
+    <div id="thank-you-modal" class="ho-modal">
+        <div class="ho-modal-content" style="text-align: center; max-width: 450px; padding: 30px;">
+            <h3 style="color: var(--gold-primary); margin-bottom: 15px;">Thank You!</h3>
+            <p style="margin-bottom: 25px; color: var(--text-light); line-height: 1.5;">Thank you for choosing <strong>Precise Analytics</strong>! Your request has been successfully submitted.</p>
+            <a href="#" class="btn" style="display: inline-block; text-decoration: none; margin-top: 0;">Okay</a>
         </div>
     </div>
 </body>

@@ -3,52 +3,617 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHURCH OF CHRIST MAYBANCAL - Viewing Mode</title>
+    <title>CHURCH OF CHRIST MAYBANCAL</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- header section -->
     <header class="header">
         <div class="church-name">MasterPeace International</div>
         <div class="header-controls">
-            <span class="badge badge-viewer">Viewing Mode</span>
-            <a href="login.html" class="btn btn-secondary btn-nav-compact">Login / Editor Access</a>
+            <a href="#church-drawer" class="btn btn-church-invite">⬇ Join Us in Worship</a>
         </div>
     </header>
 
-    <div class="main-container">
-        <main class="feed-section">
-            <div id="feed-container" class="feed-container">
-                <article class="post-card">
-                    <div class="post-header">
-                        <span>MasterPeace International</span>
-                    </div>
-                    <img class="post-image" src="CTA copy.jpg" alt="Sunday Worship Service Announcement">
-                    <div class="post-caption">
-                        <p>Sunday Worship Service Every Sunday starting at 8:30am & 3:30pm. Everyone is welcome.</p>
-                    </div>
-                </article>
-            </div>
-        </main>
+    <!-- main showcase section -->
+    <main class="main-container showcase-mode">
+        <h2 class="showcase-title">Explore Our Offerings & Expertise</h2>
+        <p class="showcase-subtitle">Select a service below to view portfolio credentials and submit a service request.</p>
 
-        <aside class="sidebar">
-            <h3>Businesses</h3>
-            <p class="quote-introducton">Services the we provide:</p>
-            <ul class="ceo-list">
-                <li class="ceo-item"><a href="ceo accounts/ceo-aldred.html">Bookkeeping<small>Fruitful Vine</small></a></li>
-                <li class="ceo-item"><a href="ceo accounts/ceo-gian.html">Lead generation <small>Verdant Trust Media</small></a></li>
-                <li class="ceo-item"><a href="ceo accounts/ceo-james.html">Smm <small>FavorWorks</small></a></li>
-                <li class="ceo-item"><a href="ceo accounts/ceo-kaeya.html">Graphics designer<small>Radiant Victory</small></a></li>
-                <li class="ceo-item"><a href="ceo accounts/ceo-kurt.html">Video editing<small>CineVision</small></a></li>
-                <li class="ceo-item"><a href="ceo accounts/ceo-michael.html">Short form<small>ViralClips Studio</small></a></li>
-                <li class="ceo-item"><a href="ceo accounts/ceo-david.html">VA<small>Apex Virtual Assistants</small></a></li>
-                <li class="ceo-item"><a href="ceo accounts/ceo-hannah.html">Copywriter<small>Ink & Impact</small></a></li>
-                <li class="ceo-item"><a href="ceo accounts/ceo-chris.html">Data Entry<small>Precise Analytics</small></a></li>
-                <li class="ceo-item"><a href="ceo accounts/ceo-patricia.html">SEO Specialist<small>RankTop Marketing</small></a></li>
-            </ul>
-        </aside>
+        <div class="business-card-list">
+
+            <!-- aldred business card -->
+            <article class="biz-card-item">
+                <div class="biz-service-tag">Bookkeeping / QBO</div>
+                <div class="biz-banner-box theme-fruitful">
+                    <h2 class="biz-brand-title font-fruitful">Fruitful Vine</h2>
+                    <a href="#aldred-section" class="btn-pill-request">Request Service</a>
+                </div>
+            </article>
+
+            <!-- gian business card -->
+            <article class="biz-card-item">
+                <div class="biz-service-tag">Lead Generation</div>
+                <div class="biz-banner-box theme-verdant">
+                    <h2 class="biz-brand-title font-verdant">Verdant Trust Media</h2>
+                    <a href="#gian-section" class="btn-pill-request">Request Service</a>
+                </div>
+            </article>
+
+            <!-- james business card -->
+            <article class="biz-card-item">
+                <div class="biz-service-tag">Social Media Marketing</div>
+                <div class="biz-banner-box theme-favor">
+                    <h2 class="biz-brand-title font-favor">FavorWorks</h2>
+                    <a href="#james-section" class="btn-pill-request">Request Service</a>
+                </div>
+            </article>
+
+            <!-- kaeya business card -->
+            <article class="biz-card-item">
+                <div class="biz-service-tag">Graphics Design</div>
+                <div class="biz-banner-box theme-radiant">
+                    <h2 class="biz-brand-title font-radiant">Radiant Victory</h2>
+                    <a href="#kaeya-section" class="btn-pill-request">Request Service</a>
+                </div>
+            </article>
+
+            <!-- kurt business card -->
+            <article class="biz-card-item">
+                <div class="biz-service-tag">Video Editing</div>
+                <div class="biz-banner-box theme-cinevision">
+                    <h2 class="biz-brand-title font-cinevision">CineVision</h2>
+                    <a href="#kurt-section" class="btn-pill-request">Request Service</a>
+                </div>
+            </article>
+
+            <!-- michael business card -->
+            <article class="biz-card-item">
+                <div class="biz-service-tag">Short Form Content</div>
+                <div class="biz-banner-box theme-viralclips">
+                    <h2 class="biz-brand-title font-viralclips">ViralClips Studio</h2>
+                    <a href="#michael-section" class="btn-pill-request">Request Service</a>
+                </div>
+            </article>
+
+            <!-- david business card -->
+            <article class="biz-card-item">
+                <div class="biz-service-tag">Virtual Assistance</div>
+                <div class="biz-banner-box theme-apex">
+                    <h2 class="biz-brand-title font-apex">Apex Virtual Assistants</h2>
+                    <a href="#david-section" class="btn-pill-request">Request Service</a>
+                </div>
+            </article>
+
+            <!-- hannah business card -->
+            <article class="biz-card-item">
+                <div class="biz-service-tag">Copywriting</div>
+                <div class="biz-banner-box theme-ink">
+                    <h2 class="biz-brand-title font-ink">Ink & Impact</h2>
+                    <a href="#hannah-section" class="btn-pill-request">Request Service</a>
+                </div>
+            </article>
+
+            <!-- chris business card -->
+            <article class="biz-card-item">
+                <div class="biz-service-tag">Data Entry</div>
+                <div class="biz-banner-box theme-precise">
+                    <h2 class="biz-brand-title font-precise">Precise Analytics</h2>
+                    <a href="#chris-section" class="btn-pill-request">Request Service</a>
+                </div>
+            </article>
+
+            <!-- patricia business card -->
+            <article class="biz-card-item">
+                <div class="biz-service-tag">SEO Specialist</div>
+                <div class="biz-banner-box theme-ranktop">
+                    <h2 class="biz-brand-title font-ranktop">RankTop Marketing</h2>
+                    <a href="#patricia-section" class="btn-pill-request">Request Service</a>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- church invitation drawer -->
+    <div id="church-drawer" class="church-drawer-overlay">
+        <div class="church-drawer-panel">
+            <a href="#" class="modal-close-icon">&times;</a>
+            <div class="drawer-header-content">
+                <span class="welcome-badge">You Are Warmly Welcome!</span>
+                <h3>Join Us in Worship</h3>
+                <p class="mt-5 text-muted">Come experience fellowship, uplifting worship, and God's word with us at MasterPeace International.</p>
+            </div>
+            <img class="post-image mt-15" src="CTA.jpg" alt="Sunday Worship Service Announcement">
+            <div class="post-caption mt-15">
+                <p><strong>Sunday Worship Services</strong><br>Every Sunday at 8:30 AM & 3:30 PM.<br>Bring your family and friends, everyone has a home here!</p>
+            </div>
+        </div>
     </div>
 
+    <!-- aldred modal section -->
+    <div id="aldred-section" class="business-section-wrapper">
+        <div class="business-container">
+            <a href="#" class="business-back-btn">&times;</a>
+            <img class="business-banner" src="image1.jpg" alt="Fruitful Vine Banner">
+            <h1>Fruitful Vine</h1>
+            <h3 class="biz-subtitle">CEO: Aldred (Bookkeeping/qbo)</h3>
+            <p class="biz-description">Professional bookkeeping, accounting, and QuickBooks Online financial management.</p>
+
+            <div class="portfolio-card mt-20">
+                <h4>Request Bookkeeping / QBO Service</h4>
+                <form action="#thank-you-modal" method="GET" class="mt-10">
+                    <div class="form-group">
+                        <label>Scope of Service Needed</label>
+                        <select>
+                            <option value="setup">QuickBooks Online Setup & Chart of Accounts</option>
+                            <option value="monthly">Monthly Bookkeeping & Bank Reconciliation</option>
+                            <option value="cleanup">Historical Bookkeeping Cleanup</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Average Monthly Transaction Volume</label>
+                        <select>
+                            <option value="low">0 - 100 transactions/month</option>
+                            <option value="mid">101 - 500 transactions/month</option>
+                            <option value="high">500+ transactions/month</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Specific Financial Goals / Instructions</label>
+                        <textarea rows="4" placeholder="Describe your current accounting system or what needs auditing..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Financial Document Link (Secure Drive Link)</label>
+                        <input type="url" placeholder="https://drive.google.com/...">
+                    </div>
+                    <button type="submit" class="btn">Submit Accounting Request</button>
+                </form>
+            </div>
+
+            <div class="contact-details mt-20">
+                <h4>Contact Details & Credentials:</h4>
+                <p class="mt-5">aldred@gmail.com | (555) 019-2834</p>
+                <div class="portfolio-buttons-group mt-10">
+                    <a href="#" target="_blank" class="btn btn-portfolio">Portfolio</a>
+                    <a href="#" target="_blank" class="btn btn-onlinejobs">OnlineJobs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- gian modal section -->
+    <div id="gian-section" class="business-section-wrapper">
+        <div class="business-container">
+            <a href="#" class="business-back-btn">&times;</a>
+            <img class="business-banner" src="image2.jpg" alt="Verdant Trust Media Banner">
+            <h1>Verdant Trust Media</h1>
+            <h3 class="biz-subtitle">CEO: Gian (Lead generation)</h3>
+            <p class="biz-description">Targeted B2B lead generation, prospect outreach, and sales funnel growth.</p>
+
+            <div class="portfolio-card mt-20">
+                <h4>Request Lead Generation Service</h4>
+                <form action="#thank-you-modal" method="GET" class="mt-10">
+                    <div class="form-group">
+                        <label>Target Audience / Industry</label>
+                        <input type="text" placeholder="e.g., SaaS Founders, Real Estate Agents, Healthcare">
+                    </div>
+                    <div class="form-group">
+                        <label>Outreach Channel Preferred</label>
+                        <select>
+                            <option value="email">B2B Cold Email Campaigns</option>
+                            <option value="linkedin">LinkedIn Outreach & Networking</option>
+                            <option value="multi">Omnichannel (Email + LinkedIn)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Target Volume</label>
+                        <input type="text" placeholder="e.g., 500 verified leads / month">
+                    </div>
+                    <div class="form-group">
+                        <label>Campaign Details & Offer Specifics</label>
+                        <textarea rows="4" placeholder="Describe your ideal customer profile (ICP) and value proposition..."></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit Lead Gen Request</button>
+                </form>
+            </div>
+
+            <div class="contact-details mt-20">
+                <h4>Contact Details & Credentials:</h4>
+                <p class="mt-5">gian@gmail.com | (555) 019-2834</p>
+                <div class="portfolio-buttons-group mt-10">
+                    <a href="#" target="_blank" class="btn btn-portfolio">Portfolio</a>
+                    <a href="#" target="_blank" class="btn btn-onlinejobs">OnlineJobs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- james modal section -->
+    <div id="james-section" class="business-section-wrapper">
+        <div class="business-container">
+            <a href="#" class="business-back-btn">&times;</a>
+            <img class="business-banner" src="image3.jpg" alt="FavorWorks Banner">
+            <h1>FavorWorks</h1>
+            <h3 class="biz-subtitle">CEO: James (Social Media Marketing)</h3>
+            <p class="biz-description">Social media strategy, content management, and audience growth optimization.</p>
+
+            <div class="portfolio-card mt-20">
+                <h4>Request Social Media Management</h4>
+                <form action="#thank-you-modal" method="GET" class="mt-10">
+                    <div class="form-group">
+                        <label>Platforms to Manage</label>
+                        <select>
+                            <option value="ig-fb">Instagram & Facebook</option>
+                            <option value="tiktok-ig">TikTok & Instagram Reels</option>
+                            <option value="full">Full Suite (FB, IG, LinkedIn, TikTok, Twitter)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Posting Frequency</label>
+                        <select>
+                            <option value="3x">3 posts per week</option>
+                            <option value="daily">Daily posting</option>
+                            <option value="custom">Custom schedule</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Brand Goals & Campaign Brief</label>
+                        <textarea rows="4" placeholder="Describe your brand tone, aesthetic preferences, and target audience..."></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit SMM Request</button>
+                </form>
+            </div>
+
+            <div class="contact-details mt-20">
+                <h4>Contact Details & Credentials:</h4>
+                <p class="mt-5">james@gmail.com | (555) 019-2834</p>
+                <div class="portfolio-buttons-group mt-10">
+                    <a href="#" target="_blank" class="btn btn-portfolio">Portfolio</a>
+                    <a href="#" target="_blank" class="btn btn-onlinejobs">OnlineJobs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- kaeya modal section -->
+    <div id="kaeya-section" class="business-section-wrapper">
+        <div class="business-container">
+            <a href="#" class="business-back-btn">&times;</a>
+            <img class="business-banner" src="image4.jpg" alt="Radiant Victory Banner">
+            <h1>Radiant Victory</h1>
+            <h3 class="biz-subtitle">CEO: Kaeya (Graphics Designer)</h3>
+            <p class="biz-description">Brand identity, visual design, marketing collateral, and digital asset creation.</p>
+
+            <div class="portfolio-card mt-20">
+                <h4>Request Graphic Design Service</h4>
+                <form action="#thank-you-modal" method="GET" class="mt-10">
+                    <div class="form-group">
+                        <label>Design Project Type</label>
+                        <select>
+                            <option value="branding">Logo & Full Brand Identity Package</option>
+                            <option value="social-graphics">Social Media Graphics & Banners</option>
+                            <option value="marketing-collateral">Flyers, Brochures, or Presentation Decks</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Design Style Preference</label>
+                        <input type="text" placeholder="e.g., Minimalist, Corporate, Vibrant, Modern">
+                    </div>
+                    <div class="form-group">
+                        <label>Design Brief & Color Preferences</label>
+                        <textarea rows="4" placeholder="Describe the concept, mood board links, and specific dimensions required..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Reference Assets Link (Drive / Moodboard)</label>
+                        <input type="url" placeholder="https://drive.google.com/...">
+                    </div>
+                    <button type="submit" class="btn">Submit Design Request</button>
+                </form>
+            </div>
+
+            <div class="contact-details mt-20">
+                <h4>Contact Details & Credentials:</h4>
+                <p class="mt-5">kaeya@gmail.com | (555) 019-2834</p>
+                <div class="portfolio-buttons-group mt-10">
+                    <a href="#" target="_blank" class="btn btn-portfolio">Portfolio</a>
+                    <a href="#" target="_blank" class="btn btn-onlinejobs">OnlineJobs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- kurt modal section -->
+    <div id="kurt-section" class="business-section-wrapper">
+        <div class="business-container">
+            <a href="#" class="business-back-btn">&times;</a>
+            <img class="business-banner" src="image5.jpg" alt="CineVision Banner">
+            <h1>CineVision</h1>
+            <h3 class="biz-subtitle">CEO: Kurt (Video editing)</h3>
+            <p class="biz-description">Professional post-production & cinematic editing.</p>
+
+            <div class="portfolio-card mt-20">
+                <h4>Request Video Editing Service</h4>
+                <form action="#thank-you-modal" method="GET" class="mt-10">
+                    <div class="form-group">
+                        <label>Video Style / Aspect Ratio</label>
+                        <select>
+                            <option value="9-16">Vertical Short Form (9:16 - TikTok / Reels / Shorts)</option>
+                            <option value="16-9">Horizontal Standard (16:9 - YouTube / Corporate)</option>
+                            <option value="custom">Custom Format / Aspect Ratio</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Video Purpose</label>
+                        <select>
+                            <option value="ad">Social Media Advertisement / Promo</option>
+                            <option value="social">Standard Social Media Vlog / Post</option>
+                            <option value="cinematic">Cinematic Event / Film Edit</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Target Duration</label>
+                        <input type="text" placeholder="e.g., 30 seconds, 5 minutes, etc.">
+                    </div>
+                    <div class="form-group">
+                        <label>Project Details & Specific Instructions</label>
+                        <textarea rows="4" placeholder="Describe the style, pacing, text overlays, or color grading you want..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Raw Footage Links (Google Drive / Dropbox)</label>
+                        <input type="url" placeholder="https://drive.google.com/...">
+                    </div>
+                    <button type="submit" class="btn">Submit Video Request</button>
+                </form>
+            </div>
+
+            <div class="contact-details mt-20">
+                <h4>Contact Details & Credentials:</h4>
+                <p class="mt-5">kurt@gmail.com | (555) 111-2222</p>
+                <div class="portfolio-buttons-group mt-10">
+                    <a href="https://kurt-lowell77griefsite.my.canva.site/protfolio-kurt-lowell-o-lopez" target="_blank" class="btn btn-portfolio">Portfolio</a>
+                    <a href="https://v2.onlinejobs.ph/jobseekers/info/5104757" target="_blank" class="btn btn-onlinejobs">OnlineJobs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- michael modal section -->
+    <div id="michael-section" class="business-section-wrapper">
+        <div class="business-container">
+            <a href="#" class="business-back-btn">&times;</a>
+            <img class="business-banner" src="image6.jpg" alt="ViralClips Studio Banner">
+            <h1>ViralClips Studio</h1>
+            <h3 class="biz-subtitle">CEO: Michael (Short form content)</h3>
+            <p class="biz-description">High-engagement vertical content creation for TikTok, YouTube Shorts, and Instagram Reels.</p>
+
+            <div class="portfolio-card mt-20">
+                <h4>Request Short-Form Video Editing</h4>
+                <form action="#thank-you-modal" method="GET" class="mt-10">
+                    <div class="form-group">
+                        <label>Video Package Style</label>
+                        <select>
+                            <option value="talking-head">Alex Hormozi Style / Captioned Talking Head</option>
+                            <option value="gaming-podcast">Podcast / Gaming Highlights Clipper</option>
+                            <option value="product-promo">E-commerce / TikTok Shop Promo Reel</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Quantity / Batch Size</label>
+                        <input type="text" placeholder="e.g., 10 reels per month">
+                    </div>
+                    <div class="form-group">
+                        <label>Editing Instructions & Hook Ideas</label>
+                        <textarea rows="4" placeholder="Specify font styles, sound effects, B-roll preferences, and target length..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Raw Video Link (Google Drive)</label>
+                        <input type="url" placeholder="https://drive.google.com/...">
+                    </div>
+                    <button type="submit" class="btn">Submit Short-Form Request</button>
+                </form>
+            </div>
+
+            <div class="contact-details mt-20">
+                <h4>Contact Details & Credentials:</h4>
+                <p class="mt-5">michael@gmail.com | (555) 019-2834</p>
+                <div class="portfolio-buttons-group mt-10">
+                    <a href="#" target="_blank" class="btn btn-portfolio">Portfolio</a>
+                    <a href="#" target="_blank" class="btn btn-onlinejobs">OnlineJobs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- david modal section -->
+    <div id="david-section" class="business-section-wrapper">
+        <div class="business-container">
+            <a href="#" class="business-back-btn">&times;</a>
+            <img class="business-banner" src="image7.jpg" alt="Apex Virtual Assistants Banner">
+            <h1>Apex Virtual Assistants</h1>
+            <h3 class="biz-subtitle">CEO: David (VA)</h3>
+            <p class="biz-description">Executive administrative support, calendar management, and business operations assisting.</p>
+
+            <div class="portfolio-card mt-20">
+                <h4>Request Virtual Assistance</h4>
+                <form action="#thank-you-modal" method="GET" class="mt-10">
+                    <div class="form-group">
+                        <label>Primary Task Requirement</label>
+                        <select>
+                            <option value="calendar">Calendar & Email Management</option>
+                            <option value="customer-support">Customer Support & Ticketing</option>
+                            <option value="general-admin">General Executive Admin & Operations</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Hours Needed Per Week</label>
+                        <select>
+                            <option value="part-time">10 - 20 hours / week</option>
+                            <option value="full-time">40 hours / week (Full-time)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Specific Software / Tool Proficiency Required</label>
+                        <input type="text" placeholder="e.g., Slack, Notion, Zendesk, Google Workspace">
+                    </div>
+                    <div class="form-group">
+                        <label>Task Scope & Instructions</label>
+                        <textarea rows="4" placeholder="Detail daily responsibilities and standard operating procedures (SOPs)..."></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit VA Request</button>
+                </form>
+            </div>
+
+            <div class="contact-details mt-20">
+                <h4>Contact Details & Credentials:</h4>
+                <p class="mt-5">david@gmail.com | (555) 019-2834</p>
+                <div class="portfolio-buttons-group mt-10">
+                    <a href="#" target="_blank" class="btn btn-portfolio">Portfolio</a>
+                    <a href="#" target="_blank" class="btn btn-onlinejobs">OnlineJobs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- hannah modal section -->
+    <div id="hannah-section" class="business-section-wrapper">
+        <div class="business-container">
+            <a href="#" class="business-back-btn">&times;</a>
+            <img class="business-banner" src="image8.jpg" alt="Ink & Impact Banner">
+            <h1>Ink & Impact</h1>
+            <h3 class="biz-subtitle">CEO: Hannah (Copywriter)</h3>
+            <p class="biz-description">Conversion copywriting, sales emails, ad copy, and high-converting landing page text.</p>
+
+            <div class="portfolio-card mt-20">
+                <h4>Request Copywriting Service</h4>
+                <form action="#thank-you-modal" method="GET" class="mt-10">
+                    <div class="form-group">
+                        <label>Copywriting Asset Type</label>
+                        <select>
+                            <option value="landing-page">Landing Page / Sales Page Copy</option>
+                            <option value="email-sequence">Email Sequence (Welcome / Sales Funnel)</option>
+                            <option value="ad-copy">Paid Ad Copy (Facebook / Google Ads)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Target Tone & Voice</label>
+                        <input type="text" placeholder="e.g., Persuasive, Professional, Witty, Direct-Response">
+                    </div>
+                    <div class="form-group">
+                        <label>Product / Offer Details & Audience</label>
+                        <textarea rows="4" placeholder="Describe what you are selling, key customer pain points, and desired call-to-action..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Reference Material Link (Brand Guidelines / Docs)</label>
+                        <input type="url" placeholder="https://drive.google.com/...">
+                    </div>
+                    <button type="submit" class="btn">Submit Copywriting Request</button>
+                </form>
+            </div>
+
+            <div class="contact-details mt-20">
+                <h4>Contact Details & Credentials:</h4>
+                <p class="mt-5">hannah@gmail.com | (555) 019-2834</p>
+                <div class="portfolio-buttons-group mt-10">
+                    <a href="#" target="_blank" class="btn btn-portfolio">Portfolio</a>
+                    <a href="#" target="_blank" class="btn btn-onlinejobs">OnlineJobs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- chris modal section -->
+    <div id="chris-section" class="business-section-wrapper">
+        <div class="business-container">
+            <a href="#" class="business-back-btn">&times;</a>
+            <img class="business-banner" src="image9.jpg" alt="Precise Analytics Banner">
+            <h1>Precise Analytics</h1>
+            <h3 class="biz-subtitle">CEO: Chris (Data Entry)</h3>
+            <p class="biz-description">Accurate data processing, spreadsheet management, web research, and database entry.</p>
+
+            <div class="portfolio-card mt-20">
+                <h4>Request Data Entry / Research Service</h4>
+                <form action="#thank-you-modal" method="GET" class="mt-10">
+                    <div class="form-group">
+                        <label>Project Scope</label>
+                        <select>
+                            <option value="spreadsheet">Spreadsheet Cleanup & Data Formatting (Excel / Google Sheets)</option>
+                            <option value="web-research">Web Research & Contact Scraping</option>
+                            <option value="database">Database / CRM Input & Migration</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Estimated Volume / Records</label>
+                        <input type="text" placeholder="e.g., 1,000 rows of data">
+                    </div>
+                    <div class="form-group">
+                        <label>Project Instructions & Formatting Rules</label>
+                        <textarea rows="4" placeholder="Specify exact columns, formatting criteria, and sources to pull from..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Source Document Link (Google Sheets / Drive)</label>
+                        <input type="url" placeholder="https://docs.google.com/spreadsheets/...">
+                    </div>
+                    <button type="submit" class="btn">Submit Data Entry Request</button>
+                </form>
+            </div>
+
+            <div class="contact-details mt-20">
+                <h4>Contact Details & Credentials:</h4>
+                <p class="mt-5">chris@gmail.com | (555) 019-2834</p>
+                <div class="portfolio-buttons-group mt-10">
+                    <a href="#" target="_blank" class="btn btn-portfolio">Portfolio</a>
+                    <a href="#" target="_blank" class="btn btn-onlinejobs">OnlineJobs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- patricia modal section -->
+    <div id="patricia-section" class="business-section-wrapper">
+        <div class="business-container">
+            <a href="#" class="business-back-btn">&times;</a>
+            <img class="business-banner" src="image10.jpg" alt="RankTop Marketing Banner">
+            <h1>RankTop Marketing</h1>
+            <h3 class="biz-subtitle">CEO: Patricia (SEO Specialist)</h3>
+            <p class="biz-description">Search engine optimization, keyword research, technical SEO audits, and ranking growth strategy.</p>
+
+            <div class="portfolio-card mt-20">
+                <h4>Request SEO Optimization Service</h4>
+                <form action="#thank-you-modal" method="GET" class="mt-10">
+                    <div class="form-group">
+                        <label>SEO Focus Area</label>
+                        <select>
+                            <option value="technical">Technical SEO Audit & Site Speed Fixes</option>
+                            <option value="keyword">Keyword Research & Content Strategy</option>
+                            <option value="off-page">Off-Page SEO & Link Building</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Website URL</label>
+                        <input type="url" placeholder="https://www.yourwebsite.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Current SEO Challenges & Goals</label>
+                        <textarea rows="4" placeholder="Describe your current traffic numbers, target keywords, or ranking issues..."></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit SEO Request</button>
+                </form>
+            </div>
+
+            <div class="contact-details mt-20">
+                <h4>Contact Details & Credentials:</h4>
+                <p class="mt-5">patricia@gmail.com | (555) 019-2834</p>
+                <div class="portfolio-buttons-group mt-10">
+                    <a href="#" target="_blank" class="btn btn-portfolio">Portfolio</a>
+                    <a href="#" target="_blank" class="btn btn-onlinejobs">OnlineJobs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer section -->
     <footer class="footer">
         <div class="footer-content">
             <div>
@@ -59,10 +624,18 @@
             <div>
                 <h4>Social Media</h4>
                 <a href="https://www.facebook.com/ChurchofChristMaybancal/" target="_blank">Facebook page</a>
-                
             </div>
         </div>
     </footer>
+
+    <!-- thank you popup -->
+    <div id="thank-you-modal" class="ho-modal">
+        <div class="ho-modal-content thank-you-content">
+            <h3>Thank You!</h3>
+            <p>Your request has been successfully submitted. Thank you for choosing our service.</p>
+            <a href="#" class="btn thank-you-btn">Okay</a>
+        </div>
+    </div>
 
 </body>
 </html>
